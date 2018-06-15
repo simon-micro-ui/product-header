@@ -1,0 +1,22 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5", 
+    "module": "es2015",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "stripInternal": false,
+    "declaration": true,
+    "moduleResolution": "node",
+    "lib": ["es2015", "dom"],
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "rootDir":"./src",  
+    "typeRoots": ["./node_modules/@types", "./node_modules"],
+    "types": ["node"]
+  },
+  "angularCompilerOptions": {
+    "skipTemplateCodegen": false
+  }
+}

@@ -1,3 +1,9 @@
+#References
+
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+https://angular.io/guide/aot-compiler
+
 # Revised
 
 Add the following to package.json
@@ -28,11 +34,42 @@ Install the angular cli:
 
 Build the project:
 
+	npm run build 
+	
+Which under the covers calls:
+	
 	ng build
 
 Run it:
 
+	npm run serve
+	
+Which under the covers calls:	
+	
 	ng serve
+	
+	
+## Optional Creation of a Local Package Manager	
+	
+https://www.npmjs.com/package/sinopia	
+	
+	yarn global add sinopia
+
+Add the registry to your npm config, i.e.
+
+	npm config edit
+
+Then add this entry:
+
+	@local:registry=http://localhost:4873	
+
+
+## Publishing a Artifact to the Respository
+
+https://docs.npmjs.com/cli/publish
+
+npm publish [<tarball>|<folder>] [--tag <tag>] [--access <public|restricted>] [--otp otpcode]
+
 
 # Angular 6 Elements To Create MicroFront End Application
 
