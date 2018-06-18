@@ -21,7 +21,6 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": [
-              "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js",
               {
                 "input":
                   "node_modules/document-register-element/build/document-register-element.js"

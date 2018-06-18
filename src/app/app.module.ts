@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
-import { ProductHeaderComponent } from './productheader/productheaer.component';
+import { ProductHeaderComponent } from './productheader/productheader.component';
 
 @NgModule({
   declarations: [ProductHeaderComponent],

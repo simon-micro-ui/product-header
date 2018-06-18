@@ -4,7 +4,13 @@ https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 
 https://angular.io/guide/aot-compiler
 
-# Revised
+
+# TODO
+
+1. Revisit what is getting concatentated (via elements-build.js). SHould not be including stuff which should be loaded in the parent, e.g. polyfills.js
+2.  
+
+# Revised Instructions (Updates and How to Run/Deploy)
 
 Add the following to package.json
 
@@ -47,24 +53,24 @@ Run it:
 Which under the covers calls:	
 	
 	ng serve
+
+
+# Building the Element
+
+https://medium.com/codingthesmartway-com-blog/angular-elements-a-practical-introduction-to-web-components-with-angular-6-52c0b3076c2c
+
+	npm install fs-extra concat -D
+
+Add the following to prod build step in package.json
+
+	node elements-build.js
 	
-	
-## Optional Creation of a Local Package Manager	
-	
-https://www.npmjs.com/package/sinopia	
-	
-	yarn global add sinopia
+e.g
 
-Add the registry to your npm config, i.e.
-
-	npm config edit
-
-Then add this entry:
-
-	@local:registry=http://localhost:4873	
+	"build-prod": "ng build --prod --output-hashing=none --verbose && node elements-build.js",
 
 
-## Publishing a Artifact to the Respository
+# Publishing a Artifact to the Respository
 
 https://docs.npmjs.com/cli/publish
 
