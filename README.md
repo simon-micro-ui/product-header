@@ -14,8 +14,18 @@ https://angular.io/guide/aot-compiler
 
 Add the following to package.json
 
-    "@webcomponents/custom-elements": "^1.1.1",
-    "@webcomponents/webcomponentsjs": "^2.0.0",
+	"dependencies": {
+		....
+		....
+	    "@webcomponents/custom-elements": "^1.1.1",
+	    "@webcomponents/webcomponentsjs": "^2.0.0",
+
+
+	"devDependencies": {
+		....
+		....
+	    "concat": "^1.0.3",
+	    "fs-extra": "^6.0.1",
 
 Add the following to angular.json (if you want to run in standalone mode).  During the build, this will bundle the included javascript files in a scripts.js file within the dist folder.
 

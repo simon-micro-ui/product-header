@@ -11,8 +11,14 @@ import { ProductHeaderComponent } from './productheader/productheader.component'
 })
 export class ProductHeaderModule {
   constructor(private injector: Injector) {
+    console.log('ProductHeaderModule.constructor : Creating and Defining CustomElement : ProductHeaderComponent');
     const productHeader = createCustomElement(ProductHeaderComponent, { injector });
-    customElements.define('product-header', productHeader);
+    let existing = customElements.get('product-header');
+    console.log('existing=' + existing);
+    //if (existing === undefined) {
+      customElements.define('product-header', productHeader);
+      console.log('customElements.define(product-header) was successful...');
+    //}
   }
 
   ngDoBootstrap() {}
