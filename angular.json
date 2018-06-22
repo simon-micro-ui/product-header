@@ -17,12 +17,13 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "./tsconfig.json",
+            "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico", 
-              "src/assets", 
+              "src/favicon.ico",
+              "src/assets",
               { "glob": "document-register-element.js", "input": "node_modules/document-register-element/build", "output": "/assets/lib" },
-              { "glob": "webcomponents-loader.js", "input": "node_modules/@webcomponents/webcomponentsjs", "output": "/assets/lib" }
+              { "glob": "webcomponents-loader.js", "input": "node_modules/@webcomponents/webcomponentsjs", "output": "/assets/lib" },
+              { "glob": "custom-elements-es5-adapter.js", "input": "node_modules/@webcomponents/webcomponentsjs", "output": "/assets/lib" }
             ],
             "styles": ["src/styles.css"],
             "scripts": [
@@ -39,7 +40,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": true,
+              "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
               "aot": true,

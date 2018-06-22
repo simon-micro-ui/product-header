@@ -2,10 +2,12 @@ const fs = require('fs-extra');
 const concat = require('concat');
 (async function build() {
     const files = [
-        './dist/product-header/scripts.js',
-        './dist/product-header/main.js',
         './dist/product-header/runtime.js',
         './dist/product-header/polyfills.js',
+        //'./dist/product-header/styles.js',
+        './dist/product-header/scripts.js',
+        //'./dist/product-header/vendor.js',
+        './dist/product-header/main.js',
     ]
     await fs.ensureDir('./dist-npm')
     await fs.ensureDir('./dist-npm/product-header')

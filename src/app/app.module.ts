@@ -4,6 +4,9 @@ import { createCustomElement } from '@angular/elements';
 
 import { ProductHeaderComponent } from './productheader/productheader.component';
 
+import 'zone.js/dist/zone';
+//import '@webcomponents/custom-elements/src/native-shim';
+
 @NgModule({
   declarations: [ProductHeaderComponent],
   imports: [BrowserModule],
@@ -15,10 +18,8 @@ export class ProductHeaderModule {
     const productHeader = createCustomElement(ProductHeaderComponent, { injector });
     let existing = customElements.get('product-header');
     console.log('existing=' + existing);
-    //if (existing === undefined) {
-      customElements.define('product-header', productHeader);
-      console.log('customElements.define(product-header) was successful...');
-    //}
+    customElements.define('product-header', productHeader);
+    console.log('customElements.define(product-header) was successful...');
   }
 
   ngDoBootstrap() {}

@@ -2,6 +2,7 @@
   "name": "product-header",
   "version": "0.0.1",
   "scripts": {
+    "compile": "tsc -project .",
     "ng": "ng",
     "start-ng": "ng serve",
     "start": "node server.js",
