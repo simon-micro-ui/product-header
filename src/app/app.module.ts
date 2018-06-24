@@ -4,7 +4,7 @@ import { createCustomElement } from '@angular/elements';
 
 import { ProductHeaderComponent } from './productheader/productheader.component';
 
-import 'zone.js/dist/zone';
+//import 'zone.js/dist/zone';
 //import '@webcomponents/custom-elements/src/native-shim';
 
 @NgModule({

@@ -13,7 +13,7 @@ app.get('/index.html', function(req,res) {
 });
 app.get('/product-header.js', function(req,res) {
     console.log('__dirname:'+__dirname);
-    res.sendFile(path.join(__dirname+'/dist-npm/product-header/product-header.js'));
+    res.sendFile(path.join(__dirname+'/dist/product-header/main.js'));
 });
 
 console.log("Starting server on port 8081");
